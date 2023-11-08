@@ -58,15 +58,16 @@
                     <figure><img src="images/parallelogram.png" alt="Shoes" /></figure>
                     <div class="card-body text-center mt-6">
                         <h2 class="text-3xl font-bold">Parallelogram</h2>
-                        <p class="text-base">Area (A) = w &#215; l</p>
+                        <p class="text-base">Area (A) = b &#215; h</p>
                         <p class="text-center pt-6">
-                            <input type="text" id="" name="" placeholder="b"
+                            <input type="text" id="parallelogram-base" name="" placeholder="b"
                                 class="w-24 bg-gray-200 px-3 py-2 text-base rounded-md mx-2"><span class="text-base">cm</span>
-                            <input type="text" id="" name="" placeholder="h"
+                            <input type="text" id="parallelogram-height" name="" placeholder="h"
                                 class="w-24 bg-gray-200 px-3 py-2 text-base rounded-md mx-2"><span class="text-base">cm</span>
                         </p>
                         <div class="card-actions mt-12">
-                            <button class="btn btn-primary border-0 bg-sky-600 text-white font-bold w-full text-xl">Calculate</button>
+                            <p class="">Area: <span id="parallelogram-area">0</span>cm<sup>2</sup></p>
+                            <button class="btn btn-primary border-0 bg-sky-600 text-white font-bold w-full text-xl" onclick="calculateParallelogramArea();">Calculate</button>
                         </div>
                     </div>
                 </div>
@@ -74,16 +75,17 @@
                 <div class="card card-compact w-96 bg-base-100 border-2 p-8">
                     <figure><img src="images/rhombus.png" alt="Shoes" /></figure>
                     <div class="card-body text-center mt-6">
-                        <h2 class="text-3xl font-bold">Parallelogram</h2>
-                        <p class="text-base">Area (A) = w &#215; l</p>
+                        <h2 class="text-3xl font-bold">Rhombus</h2>
+                        <p class="text-base">Area (A) =0.5 &#215; d<sub>1</sub> &#215; d<sub>2</sub></p>
                         <p class="text-center pt-6">
-                            <input type="text" id="" name="" placeholder="b"
+                            <input type="text" id="rhombus-diagonal-1" name="" placeholder="d1"
                                 class="w-24 bg-gray-200 px-3 py-2 text-base rounded-md mx-2"><span class="text-base">cm</span>
-                            <input type="text" id="" name="" placeholder="h"
+                            <input type="text" id="rhombus-diagonal-2" name="" placeholder="d2"
                                 class="w-24 bg-gray-200 px-3 py-2 text-base rounded-md mx-2"><span class="text-base">cm</span>
                         </p>
                         <div class="card-actions mt-12">
-                            <button class="btn btn-primary border-0 bg-sky-600 text-white font-bold w-full text-xl">Calculate</button>
+                            <p class="">Area: <span id="rhombus-area">0</span>cm<sup>2</sup></p>
+                            <button class="btn btn-primary border-0 bg-sky-600 text-white font-bold w-full text-xl" onclick="calculateRhombusArea()">Calculate</button>
                         </div>
                     </div>
                 </div>
@@ -91,7 +93,7 @@
                 <div class="card card-compact w-96 bg-base-100 border-2 p-8">
                     <figure><img src="images/pentagon.png" alt="Shoes" /></figure>
                     <div class="card-body text-center mt-6">
-                        <h2 class="text-3xl font-bold">Parallelogram</h2>
+                        <h2 class="text-3xl font-bold">Pentagon</h2>
                         <p class="text-base">Area (A) = w &#215; l</p>
                         <p class="text-center pt-6">
                             <input type="text" id="" name="" placeholder="b"
@@ -108,16 +110,17 @@
                 <div class="card card-compact w-96 bg-base-100 border-2 p-8">
                     <figure><img src="images/ellipse.png" alt="Shoes" /></figure>
                     <div class="card-body text-center mt-6">
-                        <h2 class="text-3xl font-bold">Parallelogram</h2>
-                        <p class="text-base">Area (A) = w &#215; l</p>
+                        <h2 class="text-3xl font-bold">Ellipse</h2>
+                        <p class="text-base">Area (A) = &#960;ab</p>
                         <p class="text-center pt-6">
-                            <input type="text" id="" name="" placeholder="b"
+                            <input type="text" id="ellipse-major-radius" name="" placeholder="b"
                                 class="w-24 bg-gray-200 px-3 py-2 text-base rounded-md mx-2"><span class="text-base">cm</span>
-                            <input type="text" id="" name="" placeholder="h"
+                            <input type="text" id="ellipse-minor-radius" name="" placeholder="h"
                                 class="w-24 bg-gray-200 px-3 py-2 text-base rounded-md mx-2"><span class="text-base">cm</span>
                         </p>
                         <div class="card-actions mt-12">
-                            <button class="btn btn-primary border-0 bg-sky-600 text-white font-bold w-full text-xl">Calculate</button>
+                            <p class="">Area: <span id="ellipse-area">0</span>cm<sup>2</sup></p>
+                            <button class="btn btn-primary border-0 bg-sky-600 text-white font-bold w-full text-xl" onclick="calculateEllipseArea()">Calculate</button>
                         </div>
                     </div>
                 </div>
@@ -126,6 +129,7 @@
             <!-- area calculator start -->
             <div class="w-[400px]">
                 <h2 class="text-3xl underline font-bold">Area calculator</h2>
+                <div id="calculation-entry"></div>
             </div>
             <!-- area calculator end -->
         </div>
